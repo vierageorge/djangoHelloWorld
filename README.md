@@ -22,9 +22,9 @@ python manage.py startapp polls
 Here, I'll be describing things done out of the code.
 ### Working with views.
 The following files where modified to start working with views:
-* polls/views.py: where the actual view is defined.
-* polls/urls.py: Created manually, the URL-to-View Mapping is defined in it.
-* mysite/urls.py: This file is used in the project's url file (mysite/urls.py) with 'include' instruction.
+* **polls/views.py**: where the actual view is defined.
+* **polls/urls.py**: Created manually, the URL-to-View Mapping is defined in it.
+* **mysite/urls.py**: This file is used in the project's url file (**mysite/urls.py**) with 'include' instruction.
 
 Take into account that view here doesn't refer to views in the MVC Model. It's more like the Controller part. The MVC's views will be Django's templates.
 
@@ -37,7 +37,7 @@ Add the app to the project's setting.
 ```
 polls.apps.PollsConfig
 ```
-Then create the models in polls/models.py file. In this case, models for Question and Choice were added. After that, generate migration instructions for the model just created and check how SQL would look like. Makemigrations will track changes in the models. Finally, apply the migration to the database.
+Then create the models in **polls/models.py** file. In this case, models for Question and Choice were added. After that, generate migration instructions for the model just created and check how SQL would look like. Makemigrations will track changes in the models. Finally, apply the migration to the database.
 ```
 python manage.py makemigrations polls
 python manage.py sqlmigrate polls 0001
@@ -47,7 +47,10 @@ Create a superuser
 ```
 python manage.py createsuperuser
 ```
-Make the poll app modifiable in admin, modifying polls/admin.py.
+Make the poll app modifiable in admin, modifying **polls/admin.py**.
+
+### More of Views
+Added more views to **polls/views.py** & **polls/urls.py**. Templates will be used in order to separate the web look from python code. Create **index.html** inside folders (also create folders needed) **mysite/polls/templates/polls/**, Also create **detail.html** inside the same folder.
 
 ## Deployment
 TODO -> Add additional notes about how to deploy this on a live system
