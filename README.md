@@ -43,6 +43,11 @@ python manage.py makemigrations polls
 python manage.py sqlmigrate polls 0001
 python manage.py migrate
 ```
+Create a superuser
+```
+python manage.py createsuperuser
+```
+Make the poll app modifiable in admin, modifying polls/admin.py.
 
 ## Deployment
 TODO -> Add additional notes about how to deploy this on a live system
