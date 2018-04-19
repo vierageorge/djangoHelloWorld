@@ -18,7 +18,7 @@ django-admin startproject mysite
 python manage.py runserver
 python manage.py startapp polls
 ```
-## Hands on Django Code
+## Hands on Django
 Here, I'll be describing things done out of the code.
 ### Working with views.
 The following files where modified to start working with views:
@@ -51,6 +51,14 @@ Make the poll app modifiable in admin, modifying **polls/admin.py**.
 
 ### More of Views
 Added more views to **polls/views.py** & **polls/urls.py**. Templates will be used in order to separate the web look from python code. Create **index.html** inside folders (also create folders needed) **mysite/polls/templates/polls/**, Also create **detail.html** inside the same folder.
+
+Finally, **polls/views.py** & **polls/urls.py** were updated to used django's generic views.
+
+## Testing
+Code for testing was placed in **polls/tests.py**. Tests were added for models and for methods. After that, tests must be run using:
+```
+python manage.py test polls
+```
 
 ## Deployment
 TODO -> Add additional notes about how to deploy this on a live system
