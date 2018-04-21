@@ -54,6 +54,9 @@ Added more views to **polls/views.py** & **polls/urls.py**. Templates will be us
 
 Finally, **polls/views.py** & **polls/urls.py** were updated to used django's generic views.
 
+### Working with static files
+Created file and respective folders for the path **mysite/polls/static/polls/style.css** and added there the code for stylesheet. Also,  modified **mysite/polls/template/polls/index.html** to reference the static stylesheet. Also added an image **mysite/polls/static/polls/images/background.gif** and referenced it in the stylesheet.
+
 ## Testing
 Code for testing was placed in **polls/tests.py**. Tests were added for models and for methods. After that, tests must be run using:
 ```
