@@ -57,6 +57,9 @@ Finally, **polls/views.py** & **polls/urls.py** were updated to used django's ge
 ### Working with static files
 Created file and respective folders for the path **mysite/polls/static/polls/style.css** and added there the code for stylesheet. Also,  modified **mysite/polls/template/polls/index.html** to reference the static stylesheet. Also added an image **mysite/polls/static/polls/images/background.gif** and referenced it in the stylesheet.
 
+### Customizing the Admin page
+First, some changes were made to **polls/admin.py** in order to modify how the Add Question view's UX is configured. So that the look and feel of the admin page was also modified, a folder **mysite/templates** was created and referenced on the TEMPLATES setting of **mysite/settings.py**. Inside it was created folder **admin** and copyied **base_site.html** from django source code. Finally, this file is modified in order in order to change the title of the admin page.
+
 ## Testing
 Code for testing was placed in **polls/tests.py**. Tests were added for models and for methods. After that, tests must be run using:
 ```
